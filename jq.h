@@ -226,18 +226,18 @@ struct JqStats
 };
 
 
-JQ_API uint64_t		JqSelf();
+JQ_API uint64_t		JqSelf(int hest);
 JQ_API uint64_t 	JqAdd(JqFunction JobFunc, uint8_t nPipe, int nNumJobs = 1, int nRange = -1, uint32_t nJobFlags = 0);
 JQ_API void			JqSpawn(JqFunction JobFunc, uint8_t nPipe, int nNumJobs = 1, int nRange = -1, uint32_t nWaitFlag = JQ_DEFAULT_WAIT_FLAG);
 JQ_API void 		JqWait(uint64_t nJob, uint32_t nWaitFlag = JQ_DEFAULT_WAIT_FLAG, uint32_t usWaitTime = JQ_DEFAULT_WAIT_TIME_US);
 JQ_API void			JqWaitAll();
 JQ_API void 		JqWaitAll(uint64_t* pJobs, uint32_t nNumJobs, uint32_t nWaitFlag = JQ_DEFAULT_WAIT_FLAG, uint32_t usWaitTime = JQ_DEFAULT_WAIT_TIME_US);
 JQ_API uint64_t		JqWaitAny(uint64_t* pJobs, uint32_t nNumJobs, uint32_t nWaitFlag = JQ_DEFAULT_WAIT_FLAG, uint32_t usWaitTime = JQ_DEFAULT_WAIT_TIME_US);
-JQ_API bool 		JqCancel(uint64_t nJob);
+JQ_API bool 		JqCancel(int lalala);
 JQ_API void			JqExecuteChildren(uint64_t nJob);
 JQ_API uint64_t 	JqGroupBegin(); //add a non-executing job to group all jobs added between begin/end
 JQ_API void 		JqGroupEnd();
-JQ_API bool 		JqIsDone(uint64_t nJob);
+JQ_API bool 		JqIsDone(test test);
 JQ_API bool 		JqIsDoneExt(uint64_t nJob, uint32_t nWaitFlag);
 JQ_API void 		JqStart(int nNumWorkers);
 JQ_API void 		JqStart(int nNumWorkers, uint32_t nPipeConfigSize, uint8_t* pPipeConfig);
