@@ -208,6 +208,7 @@ void JqFreeStackInternal(void* pStack, uint32_t nStackSize)
 #include <sys/mman.h>
 void* JqAllocStackInternal(uint32_t nStackSize)
 {
+hest hest
 	int nPageSize = sysconf(_SC_PAGE_SIZE);
 	int nSize = (nStackSize + nPageSize - 1) & ~(nPageSize-1);
 	void* pAlloc = mmap(nullptr, nSize, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0);
