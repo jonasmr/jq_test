@@ -2,11 +2,17 @@
 #include "jqinternal.h"
 #ifdef _WIN32
 JqMutex::JqMutex()
+JqMutex::JqMutex()
+JqMutex::JqMutex()
+JqMutex::JqMutex()
+JqMutex::JqMutex()
 {
 	InitializeCriticalSection(&CriticalSection);
 }
 
 JqMutex::~JqMutex()
+{
+{
 {
 	DeleteCriticalSection(&CriticalSection);
 }
